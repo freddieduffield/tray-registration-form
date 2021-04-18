@@ -25,11 +25,11 @@ I have chosen to use some open source libraries to help speed up development tim
     - [x] install tailwind
     - [x] setup git hooks  
 - [] setup redux
-    - [] types (typescript)  
-    - [] action types (redux)
-    - [] action creators / tests
-    - [] reducer / tests
-    - [] store 
+    - [x] types (typescript)  
+    - [x] action types (redux)
+    - [x] action creators / tests
+    - [x] reducer / tests
+    - [x] store 
 - [] create form components and functionality 
     - [] Form
     - [] FormField component (reusable)
@@ -43,6 +43,7 @@ I have chosen to use some open source libraries to help speed up development tim
 - [] Divide form into pages using tabs component
 - [] write integration test
 - [] add styling
+- [] refactor and tidy up
 - [] Deploy to AWS
  
 # 📈 Data (inputs, output etc)
