@@ -1,13 +1,13 @@
 import { UPDATE_USER } from './actions';
-import { UserFormAction, User } from '../types';
+import { UserFormAction, User } from '../../types';
 
 const initialState: User = {
   name: '',
   role: '',
   email: '',
   password: '',
-  recieveTrayUpdates: false,
-  recieveOtherProductsCommunication: false,
+  receiveTrayUpdates: false,
+  receiveOtherProductsCommunication: false,
 };
 
 export function reducer(

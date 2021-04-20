@@ -1,10 +1,15 @@
-interface User {
+export type User = PersonalDetails & PrivacySettings;
+
+export interface PersonalDetails {
   name: string;
   role?: string;
   email: string;
   password: string;
-  recieveTrayUpdates?: boolean;
-  recieveOtherProductsCommunication?: boolean;
+}
+
+export interface PrivacySettings {
+  receiveTrayUpdates: boolean;
+  receiveOtherProductsCommunication: boolean;
 }
 
 export interface UserFormAction {
@@ -14,4 +19,3 @@ export interface UserFormAction {
 
 export type DispatchType = (args: UserFormAction) => UserFormAction;
 
-export { User };

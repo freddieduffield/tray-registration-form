@@ -24,18 +24,19 @@ I have chosen to use some open source libraries to help speed up development tim
     - [x] install formik
     - [x] install tailwind
     - [x] setup git hooks  
-- [] setup redux
+- [x] setup redux
     - [x] types (typescript)  
     - [x] action types (redux)
     - [x] action creators / tests
     - [x] reducer / tests
     - [x] store 
 - [] create form components and functionality 
-    - [] Form
-    - [] FormField component (reusable)
+    - [x] UserForm
+    - [x] PrivacyForm
     - [] validation
         - [] email
         - [] password (length > 9 / 1 number / least 1 upper / lowercase)
+    - []  Make forms reusable
     - [] submit and done screen    
 - [] create tabs component and functionality 
     - [] Tabs component
@@ -102,5 +103,8 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+## Reflections
 
+* Using tailwind css node versions
 
+* make form more reusables

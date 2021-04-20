@@ -1,5 +1,5 @@
 import { updateUser } from './actions';
-import { User } from '../types';
+import { User } from '../../types';
 
 describe('actions', () => {
   it('should create an action to update the user', () => {

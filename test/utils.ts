@@ -6,8 +6,8 @@ export function buildState(overrides?: User): User {
     role: '',
     email: '',
     password: '',
-    recieveTrayUpdates: false,
-    recieveOtherProductsCommunication: false,
+    receiveTrayUpdates: false,
+    receiveOtherProductsCommunication: false,
     ...overrides,
   };
 }

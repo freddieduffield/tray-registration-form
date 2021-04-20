@@ -1,5 +1,5 @@
 import { reducer } from './reducer';
-import { buildState } from '../../test/utils';
+import { buildState } from '../../../test/utils';
 
 describe('UserForm reducer', () => {
   const initialState = buildState();
