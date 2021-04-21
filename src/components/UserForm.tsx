@@ -11,6 +11,7 @@ import {FormFieldWithValidation} from "./Form/FormFieldWithValidation";
 import {SubmitButton} from "./Form/SubmitButton";
 
 export const UserForm: React.FC = () => {
+    //TODO:  create a submit hook use it here and in PrivacyForm
     const dispatch: Dispatch<any> = useDispatch()
     const history = useHistory();
 
@@ -25,12 +26,12 @@ export const UserForm: React.FC = () => {
             initialValues={initialValues}
             onSubmit={(values, actions) => {
                 dispatch(updateUser(values));
-                history.push('/privacy')
+                history.push('/user/privacy')
                 actions.setSubmitting(false);
             }}
         >
             {({errors, touched, isValidating}) => (
-                <Form>
+                <Form className="form">
                     <FormFieldWithValidation errors={errors} name="name" validate={validateName} touched={touched}/>
                     <FormField name="role"/>
                     <FormFieldWithValidation errors={errors} name="email" type="email" validate={validateEmail}

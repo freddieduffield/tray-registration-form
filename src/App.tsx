@@ -1,41 +1,30 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
-    Redirect,
 } from "react-router-dom";
+import './App.css';
 import {UserForm} from './components/UserForm';
 import {PrivacyForm} from "./components/PrivacyForm";
 import {SuccessScreen} from "./components/SuccessScreen";
-import {Tab} from "./components/Tab";
+import {Tab} from "./components/Tabs/Tab";
 
 function App() {
     return (
-        <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <Tab name="User" path="/user"/>
-                        <Tab name="Privacy" path="/privacy"/>
-                        <Tab name="Done" path="/done"/>
-                    </ul>
-                </nav>
-
-                <Switch>
-                    <Route path="/user">
-                        <UserForm />
-                    </Route>
-                    <Route path="/privacy">
-                        <PrivacyForm />
-                    </Route>
-                    <Route path="/done">
-                        <SuccessScreen />
-                    </Route>
-                    <Redirect from="/" to="/user" />
-                </Switch>
-            </div>
-        </Router>
+        <div className="main">
+            <nav>
+                <ul className="tabs">
+                    <Tab name="User" path="/user"/>
+                    <Tab name="Privacy" path="/user/privacy"/>
+                    <Tab name="Done" path="/user/done"/>
+                </ul>
+            </nav>
+            <Switch>
+                <Route exact path="/user" component={UserForm}/>
+                <Route path="/user/privacy" component={PrivacyForm}/>
+                <Route path="/user/done" component={SuccessScreen}/>
+            </Switch>
+        </div>
     );
 }
 

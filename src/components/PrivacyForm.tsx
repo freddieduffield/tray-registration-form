@@ -6,6 +6,7 @@ import {Dispatch} from "redux";
 import {useDispatch} from "react-redux";
 import {updateUser} from "../state/User/actions";
 import {SubmitButton} from "./Form/SubmitButton";
+import './Form/Form.css';
 
 export const PrivacyForm: React.FC<{}> = () => {
     const dispatch: Dispatch<any> = useDispatch()
@@ -21,18 +22,18 @@ export const PrivacyForm: React.FC<{}> = () => {
             initialValues={initialValues}
             onSubmit={(values, actions) => {
                 dispatch(updateUser(values));
-                history.push('/done');
+                history.push('/user/done');
                 actions.setSubmitting(false);
             }}
         >
-            <Form>
+            <Form className="form">
                 <label>
-                    <Field type="checkbox" name="receiveTrayUpdates"/>
+                    <Field className="checkbox" type="checkbox" name="receiveTrayUpdates"/>
                     Receive updates about Tray.io product by email
 
                 </label>
                 <label>
-                    <Field type="checkbox" name="receiveOtherProductsCommunication"/>
+                    <Field className="checkbox" type="checkbox" name="receiveOtherProductsCommunication"/>
                     Receive communication by email for other products created by the Tray.io team
                 </label>
                 <SubmitButton />

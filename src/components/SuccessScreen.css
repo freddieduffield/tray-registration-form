@@ -1,0 +1,8 @@
+.success-screen-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    height: 50vh;
+}
