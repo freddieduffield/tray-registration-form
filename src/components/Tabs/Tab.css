@@ -1,22 +1,24 @@
 .tab {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
 }
 
 .tab:nth-child(2) {
-    border-right: none;
-    border-left: none;
+  border-right: none;
+  border-left: none;
 }
 
 .nav-link {
-    display: block;
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .isActive {
-    background: lavender;
+  background: lavender;
 }

@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
+
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import {reducer} from './state/User/reducer';
-import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { store } from './state/store';
 
-export const store = createStore(reducer);
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Provider store={store}>
-                <Switch>
-                    <Route path="/user" component={App}/>
-                    <Redirect from="/" to="/user"/>
-                </Switch>
-            </Provider>
-        </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/user" component={App} />
+          <Redirect from="/" to="/user" />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root') || document.createElement('div'),
 );

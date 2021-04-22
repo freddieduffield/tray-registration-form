@@ -1,6 +1,8 @@
-import { User } from '../src/types';
+import { PersonalDetails, PrivacySettings, User } from './types';
 
-export function buildState(overrides?: User): User {
+export function buildState(
+  overrides?: PersonalDetails | PrivacySettings,
+): User {
   return {
     name: '',
     role: '',

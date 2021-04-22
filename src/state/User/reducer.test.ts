@@ -1,5 +1,6 @@
 import { reducer } from './reducer';
-import { buildState } from '../../../test/utils';
+import { buildState } from '../../testUtils';
+import { PersonalDetails, UserFormAction } from '../../types';
 
 describe('UserForm reducer', () => {
   const initialState = buildState();
@@ -10,13 +11,13 @@ describe('UserForm reducer', () => {
   });
 
   it('should handle UPDATE_FORM action', () => {
-    const updatedUserData = {
+    const updatedUserData: PersonalDetails = {
       name: 'Fred',
       email: 'fred@email.com',
       password: 'password',
     };
 
-    const updateUserAction = {
+    const updateUserAction: UserFormAction = {
       type: 'UPDATE_USER',
       user: updatedUserData,
     };

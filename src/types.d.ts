@@ -14,8 +14,5 @@ export interface PrivacySettings {
 
 export interface UserFormAction {
   type: string;
-  user: User;
+  user: PersonalDetails | PrivacySettings;
 }
-
-export type DispatchType = (args: UserFormAction) => UserFormAction;
-

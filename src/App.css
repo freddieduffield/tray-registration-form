@@ -1,9 +1,11 @@
 .main {
-    width: 60%;
-    margin: 0 auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .tabs {
-    display: flex;
-    margin-top: 1rem;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding: 0;
 }
